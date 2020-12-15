@@ -54,11 +54,17 @@ Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, LCD_RESET); //Start communic
 unsigned long millisAnterior;
 unsigned long millisAtual;
 int tempoLuzLigada;
-#define PORTALED 53
+#define PORTALED 22
 
-
+#define PORTABUZZER 52
+#define PORTALEDVERDE 49
 void setup()
 {
+  pinMode(PORTALED, OUTPUT);
+  pinMode(PORTABUZZER, OUTPUT);
+  pinMode(PORTALEDVERDE, OUTPUT);
+  digitalWrite(PORTALED, LOW);
+  digitalWrite(PORTALEDVERDE, LOW);
   delay(2000);
   tft.reset();          //Always reset at start
   tft.begin(0x9341);    // My LCD uses LIL9341 Interface driver IC
@@ -66,7 +72,7 @@ void setup()
   tft.fillScreen(WHITE);
   WelcomeScreen();
   Serial.begin(9600);
-  pinMode(PORTALED, OUTPUT);
+
 }
 
 
@@ -211,6 +217,7 @@ void telaLuzLigada(){
     if(tempoLuzLigada==0){
       desligarLuz();
       tela2();
+      //acionar buzzer
     }
    }
   
@@ -222,7 +229,20 @@ void telaLuzLigada(){
 
 void desligarLuz (){
   digitalWrite(PORTALED, LOW);
+  acionarBuzzer();
 }
 void ligarLuz (){
 digitalWrite(PORTALED, HIGH);
+}
+
+void acionarBuzzer(){
+digitalWrite(PORTALEDVERDE,HIGH);
+tone(PORTABUZZER, 2000);
+delay(1000);
+noTone(PORTABUZZER);
+delay(200);
+tone(PORTABUZZER, 2000);
+delay(1000);
+noTone(PORTABUZZER);
+digitalWrite(PORTALEDVERDE,LOW);
 }
