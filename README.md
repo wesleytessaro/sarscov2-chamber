@@ -55,6 +55,7 @@ objetos pessoais, como carteiras e máscaras.</p>
 
 - Github: [@wesleytessaro](https://github.com/wesleytessaro)
 - LinkedIn: [@wesleytessaro](https://linkedin.com/in/wesleytessaro)
+![image](https://user-images.githubusercontent.com/38302789/132383052-5d1d2131-c1ca-4ea7-991c-40c50245eb8c.png)
 
 🎓 **Students: Gustavo, Michelle e Beatriz**
 ## Show your support
