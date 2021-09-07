@@ -51,11 +51,12 @@ objetos pessoais, como carteiras e máscaras.</p>
 
 ## Author
 
-👤 **Wesley Tessaro Andrade**
+👤 **Wesley Tessaro Andrade (professor)**
 
 - Github: [@wesleytessaro](https://github.com/wesleytessaro)
 - LinkedIn: [@wesleytessaro](https://linkedin.com/in/wesleytessaro)
 
+🎓 **Students: Gustavo, Michelle e Beatriz**
 ## Show your support
 
 Give a ⭐️ if this project helped you!
